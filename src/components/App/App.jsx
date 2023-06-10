@@ -1,4 +1,5 @@
 import { Container, Header, SearchForm, Section, Text } from 'components';
+import { Filter } from 'components/Filter/Filter';
 
 import { TodoItem } from 'components/TodoItem/TodoItem';
 import { useSelector } from 'react-redux';
@@ -13,10 +14,14 @@ export const App = () => {
         <Container>
           <SearchForm />
 
-          {todos.length === 0 && (
+          {todos.length === 0 ? (
             <Text textAlign="center">There are no any todos ... </Text>
+          ) : (
+            <>
+              <Filter />
+              <TodoItem />
+            </>
           )}
-          <TodoItem />
         </Container>
       </Section>
     </>

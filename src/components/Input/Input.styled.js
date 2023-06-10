@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const SearchFormStyled = styled.form`
+export const InputStyled = styled.form`
   width: ${({ theme }) => theme.spacing(100)};
   margin-left: auto;
   margin-right: auto;
@@ -32,17 +32,4 @@ export const InputSearch = styled.input`
   &::placeholder {
     font-weight: 200;
   }
-`;
-
-export const FormBtn = styled.button`
-  width: 50px;
-  height: 50px;
-
-  font-size: 20px;
-  font-weight: bold;
-  color: ${({ theme }) => theme.colors.dark};
-
-  position: absolute;
-  top: 0;
-  right: 0;
 `;
