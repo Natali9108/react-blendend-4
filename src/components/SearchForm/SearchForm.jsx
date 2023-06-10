@@ -1,5 +1,6 @@
 import { FiSearch } from 'react-icons/fi';
-import { FormBtn, InputSearch, SearchFormStyled } from './SearchForm.styled';
+import { InputSearch, InputStyled } from '../Input/Input.styled';
+import { FormBtn } from './SearchForm.styled';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
@@ -39,7 +40,7 @@ export const SearchForm = () => {
   };
 
   return (
-    <SearchFormStyled onSubmit={handleSubmit}>
+    <InputStyled onSubmit={handleSubmit}>
       <FormBtn type="submit">
         <FiSearch size="16px" />
       </FormBtn>
@@ -51,6 +52,6 @@ export const SearchForm = () => {
         value={query}
         autoFocus
       />
-    </SearchFormStyled>
+    </InputStyled>
   );
 };
